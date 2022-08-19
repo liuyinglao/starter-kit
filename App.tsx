@@ -5,6 +5,11 @@ import {
   ViroText,
   ViroTrackingStateConstants as ViroConstants,
   ViroARSceneNavigator,
+  ViroScene,
+  ViroNode,
+  ViroVRSceneNavigator,
+  ViroTrackingState,
+  ViroTrackingReason,
 } from '@viro-community/react-viro';
 
 import {
@@ -17,15 +22,14 @@ const HelloWorldSceneAR = () => {
   console.log(t.data().toString());
 
 
-  function onInitialized(state, reason) {
+  function onInitialized(state: ViroTrackingState, reason: ViroTrackingReason): void {
     console.log('guncelleme', state, reason);
     if (state === ViroConstants.TRACKING_NORMAL) {
       setText("Hello Tensor" + t.data().toString() + "!!");
-    } else if (state === ViroConstants.TRACKING_NONE) {
+    } else {
       // Handle loss of tracking
     }
   }
-
   return (
     <ViroARScene onTrackingUpdated={onInitialized}>
       <ViroText
@@ -39,6 +43,7 @@ const HelloWorldSceneAR = () => {
 };
 
 export default () => {
+
   return (
     <ViroARSceneNavigator
       autofocus={true}
