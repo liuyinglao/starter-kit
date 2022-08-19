@@ -3,17 +3,24 @@ import {StyleSheet} from 'react-native';
 import {
   ViroARScene,
   ViroText,
-  ViroConstants,
+  ViroTrackingStateConstants as ViroConstants,
   ViroARSceneNavigator,
 } from '@viro-community/react-viro';
 
+import {
+  torch
+} from 'react-native-pytorch-core';
+
 const HelloWorldSceneAR = () => {
   const [text, setText] = useState('Initializing AR...');
+  const t = torch.tensor([1,2,3]);
+  console.log(t.data().toString());
+
 
   function onInitialized(state, reason) {
     console.log('guncelleme', state, reason);
     if (state === ViroConstants.TRACKING_NORMAL) {
-      setText('Hello World!');
+      setText("Hello Tensor" + t.data().toString() + "!!");
     } else if (state === ViroConstants.TRACKING_NONE) {
       // Handle loss of tracking
     }

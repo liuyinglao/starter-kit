@@ -11,6 +11,11 @@ PODS:
     - ReactCommon/turbomodule/core (= 0.65.1)
   - fmt (6.2.1)
   - glog (0.3.5)
+  - LibTorch-Lite (1.12.0):
+    - LibTorch-Lite/Core (= 1.12.0)
+  - LibTorch-Lite/Core (1.12.0):
+    - LibTorch-Lite/Torch
+  - LibTorch-Lite/Torch (1.12.0)
   - RCT-Folly (2021.04.26.00):
     - boost-for-react-native
     - DoubleConversion
@@ -206,6 +211,12 @@ PODS:
     - React-jsi (= 0.65.1)
     - React-perflogger (= 0.65.1)
   - React-jsinspector (0.65.1)
+  - react-native-pytorch-core (0.2.1):
+    - LibTorch-Lite (~> 1.12.0)
+    - React
+    - React-callinvoker
+    - React-Core
+    - SwiftyJSON (~> 5.0)
   - React-perflogger (0.65.1)
   - React-RCTActionSheet (0.65.1):
     - React-Core/RCTActionSheetHeaders (= 0.65.1)
@@ -270,6 +281,7 @@ PODS:
     - React-cxxreact (= 0.65.1)
     - React-jsi (= 0.65.1)
     - React-perflogger (= 0.65.1)
+  - SwiftyJSON (5.0.1)
   - ViroKit (1.0):
     - React
   - ViroReact (1.0):
@@ -294,6 +306,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-pytorch-core (from `../node_modules/react-native-pytorch-core`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -314,6 +327,8 @@ SPEC REPOS:
   trunk:
     - boost-for-react-native
     - fmt
+    - LibTorch-Lite
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -346,6 +361,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-pytorch-core:
+    :path: "../node_modules/react-native-pytorch-core"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -384,6 +401,7 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: df8f81d2a7541ee6755a047b398a5cb5a72acd0e
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 5337263514dd6f09803962437687240c5dc39aa4
+  LibTorch-Lite: c2210be0ed41c3a7f972c82715663a44d35ad97c
   RCT-Folly: 0dd9e1eb86348ecab5ba76f910b56f4b5fef3c46
   RCTRequired: 6cf071ab2adfd769014b3d94373744ee6e789530
   RCTTypeSafety: b829c59453478bb5b02487b8de3336386ab93ab1
@@ -395,6 +413,7 @@ SPEC CHECKSUMS:
   React-jsi: 12913c841713a15f64eabf5c9ad98592c0ec5940
   React-jsiexecutor: 43f2542aed3c26e42175b339f8d37fe3dd683765
   React-jsinspector: 41e58e5b8e3e0bf061fdf725b03f2144014a8fb0
+  react-native-pytorch-core: 64781195f00b602e369af2e5b0e08a35429895c8
   React-perflogger: fd28ee1f2b5b150b00043f0301d96bd417fdc339
   React-RCTActionSheet: 7f3fa0855c346aa5d7c60f9ced16e067db6d29fa
   React-RCTAnimation: 2119a18ee26159004b001bc56404ca5dbaae6077
@@ -407,10 +426,11 @@ SPEC CHECKSUMS:
   React-RCTVibration: 92d41c2442e5328cc4d342cd7f78e5876b68bae5
   React-runtimeexecutor: 85187f19dd9c47a7c102f9994f9d14e4dc2110de
   ReactCommon: eafed38eec7b591c31751bfa7494801618460459
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   ViroKit: 700d3d4ca086368d06224de1cbbc19781aea2094
   ViroReact: f4980e6b04918c4340637f9cbaae22a6bb7ea440
   Yoga: aa0cb45287ebe1004c02a13f279c55a95f1572f4
 
-PODFILE CHECKSUM: e29e8d5f32318ace4c7f1fc71fd62e99dc6a1b3e
+PODFILE CHECKSUM: 9a7c69cd6c5c48b63e46c55f54c2abec87a8d4f7
 
 COCOAPODS: 1.11.2
