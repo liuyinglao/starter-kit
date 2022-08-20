@@ -11,5 +11,5 @@ The App has only been tested in iOS phone so far.
 2. `cd starter-kit`
 3. `npm install`
 4. `npx pod-install` (iOS)
-5. `npx react-native run-ios`
+5. `npx react-native run-ios --device <iPhone Name>` // xcrun xctrace list devices to show iPhone Name
 
