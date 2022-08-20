@@ -1,6 +1,6 @@
-# Viro Starter Kit
+# Viro Starter Kit w/ react-native-pytorch-core
 
-This is a blank React Native project setup with reactviro and react-native-pytorch-core. It is built on top of the (Viro Starter Kit)[https://github.com/ViroCommunity/starter-kit]
+This is a exercise React Native project setup with reactviro and react-native-pytorch-core. It is built on top of the (Viro Starter Kit)[https://github.com/ViroCommunity/starter-kit]
 
 
 ## Installation
